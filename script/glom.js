@@ -529,6 +529,7 @@ GameManager.prototype.addRandomTile = function () {
     var tile = new Tile(this.grid.randomAvailableCell(), value);
     $('.tile.tile-' + tile.value + ' .tile-inner').css({'background-image': 'url('+img[Math.log(tile.value)/Math.LN2]+')'});
     $('.tile.tile-' + tile.value).title = names[Math.log(tile.value)/Math.LN2]+' (' + tile.value + ')';
+    Console.log($('.tile.tile-' + tile.value));
   
     this.grid.insertTile(tile);
   }
