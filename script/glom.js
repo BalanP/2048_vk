@@ -258,7 +258,7 @@ HTMLActuator.prototype.addTile = function (tile) {
 
   //Make that a VodkaKomrades friend
   $('.tile.tile-' + tile.value + ' .tile-inner').css({'background-image': 'url('+img[Math.log(tile.value)/Math.LN2]+')'});
-  //$('.tile.tile-' + tile.value + ' .tile-inner').css({'title': ''+names[Math.log(tile.value)/Math.LN2]+' (' + tile.value + ')'});
+  $('.tile.tile-' + tile.value + ' .tile-inner').css({'title': ''+names[Math.log(tile.value)/Math.LN2]+' (' + tile.value + ')'});
   
   // Call the resize-a-magig
   resizeTextOn(".tile-"+tile.value);
@@ -528,7 +528,7 @@ GameManager.prototype.addRandomTile = function () {
     var value = Math.random() < 0.9 ? 2 : 4;
     var tile = new Tile(this.grid.randomAvailableCell(), value);
     $('.tile.tile-' + tile.value + ' .tile-inner').css({'background-image': 'url('+img[Math.log(tile.value)/Math.LN2]+')'});
-    //$('.tile.tile-' + tile.value + ' .tile-inner').css({'title': ''+names[Math.log(tile.value)/Math.LN2]+' (' + tile.value + ')'});
+    $('.tile.tile-' + tile.value + ' .tile-inner').css({'title': ''+names[Math.log(tile.value)/Math.LN2]+' (' + tile.value + ')'});
   
     this.grid.insertTile(tile);
   }
@@ -720,7 +720,7 @@ window.requestAnimationFrame(function () {
      	if (friends.response) {
           for (var i in friends.response.items) {
   	        img[Number(i) + 1] = (friends.response.items[i].photo_100);
-  	        img[Number(i) + 1] = (friends.response.items[i].name + ' ' + friends.response.items[i].lastname);
+  	        names[Number(i) + 1] = (friends.response.items[i].name + ' ' + friends.response.items[i].lastname);
          }
       new GameManager(4, KeyboardInputManager, HTMLActuator, LocalScoreManager);
      	} else {
