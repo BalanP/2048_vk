@@ -258,7 +258,7 @@ HTMLActuator.prototype.addTile = function (tile) {
 
   //Make that a VodkaKomrades friend
   $('.tile.tile-' + tile.value + ' .tile-inner').css({'background-image': 'url('+img[Math.log(tile.value)/Math.LN2]+')'});
-  $('.tile.tile-' + tile.value + ' .tile-inner').title = names[Math.log(tile.value)/Math.LN2]+' (' + tile.value + ')';
+  $('.tile.tile-' + tile.value + ' .tile-inner').title(names[Math.log(tile.value)/Math.LN2]+' (' + tile.value + ')');
   
   // Call the resize-a-magig
   resizeTextOn(".tile-"+tile.value);
