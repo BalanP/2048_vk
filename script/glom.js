@@ -528,7 +528,7 @@ GameManager.prototype.addRandomTile = function () {
     var value = Math.random() < 0.9 ? 2 : 4;
     var tile = new Tile(this.grid.randomAvailableCell(), value);
     $('.tile.tile-' + tile.value + ' .tile-inner').css({'background-image': 'url('+img[Math.log(tile.value)/Math.LN2]+')'});
-    $('.tile.tile-' + tile.value + ' .tile-inner').css({'title': ''+names[Math.log(tile.value)/Math.LN2]+' (' + tile.value + '')'});
+    $('.tile.tile-' + tile.value + ' .tile-inner').css({'title': ''+names[Math.log(tile.value)/Math.LN2]+' (' + tile.value + ')'});
   
     this.grid.insertTile(tile);
   }
