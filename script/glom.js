@@ -720,7 +720,7 @@ window.requestAnimationFrame(function () {
      	if (friends.response) {
           for (var i in friends.response.items) {
   	        img[Number(i) + 1] = (friends.response.items[i].photo_100);
-  	        names[Number(i) + 1] = (friends.response.items[i].name + ' ' + friends.response.items[i].lastname);
+  	        names[Number(i) + 1] = (friends.response.items[i].first_name + ' ' + friends.response.items[i].last_name);
          }
       new GameManager(4, KeyboardInputManager, HTMLActuator, LocalScoreManager);
      	} else {
